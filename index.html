@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutureFit - Maillots Futuristes</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Polices futuristes (Orbitron pour titres, Poppins pour texte) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap">
+    <!-- Icônes (par exemple, Font Awesome pour le panier) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <!-- Remplacez par votre logo si vous en avez un -->
+                <h1>FAYE<span class="accent">_ALBERT</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#product-grid">Maillots Club/Sélection</a></li>
+                    <li><a href="#collection-section">Collection</a></li>
+                    <!-- Ajoutez d'autres liens si nécessaire -->
+                </ul>
+            </nav>
+            <div id="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Habillez l'Avenir du Football</h2>
+                <p>Découvrez notre collection exclusive de maillots ultra-modernes.</p>
+                <a href="#product-grid" class="btn-primary">Explorer la Collection</a>
+            </div>
+        </section>
+
+        <section id="product-grid" class="product-section">
+            <h2>Maillots Club & Sélections</h2>
+            <div id="product-list" class="grid-container">
+                <!-- Les produits club/sélection seront injectés ici par JavaScript -->
+            </div>
+        </section>
+
+        <section id="collection-section" class="product-section">
+            <h2>Maillots de Collection</h2>
+             <div id="collection-list" class="grid-container">
+                <!-- Les produits de collection seront injectés ici par JavaScript -->
+             </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Nini Code. Tous droits réservés.</p>
+            <p>Contactez-nous sur WhatsApp : +221 77 209 68 24</p>
+            <!-- Ajoutez des icônes sociales si vous le souhaitez -->
+        </div>
+    </footer>
+
+    <!-- Panier Modal -->
+    <div id="cart-modal">
+        <div class="cart-content">
+            <button id="close-cart-btn" class="close-btn">×</button>
+            <h2>Votre Panier</h2>
+
+            <!-- Étape 1: Affichage du panier -->
+            <div id="cart-step-items">
+                <div id="cart-items">
+                    <!-- Les articles du panier seront injectés ici -->
+                    <p class="empty-cart-message">Votre panier est vide.</p>
+                </div>
+                <div class="cart-summary">
+                    <p>Total: <span id="cart-total">0</span> FCFA</p>
+                </div>
+                 <button id="proceed-to-checkout-btn" class="btn-primary">Procéder à la commande</button>
+            </div>
+
+            <!-- Étape 2: Formulaire client -->
+            <div id="cart-step-form" class="hidden">
+                 <h2>Vos Informations</h2>
+                 <form id="customer-info-form">
+                     <div class="form-group">
+                         <label for="customer-name">Nom complet:</label>
+                         <input type="text" id="customer-name" required>
+                     </div>
+                     <div class="form-group">
+                         <label for="customer-address">Adresse de livraison:</label>
+                         <textarea id="customer-address" rows="3" required></textarea>
+                     </div>
+                     <button type="submit" id="send-whatsapp-order-btn" class="btn-primary">Envoyer la commande sur WhatsApp</button>
+                     <button type="button" id="back-to-cart-btn" class="btn-secondary">Retour au panier</button>
+                 </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
